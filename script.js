@@ -36,7 +36,7 @@ function gameLoop(){
 	frames++;
 	average_new_per_second = coeff*Math.max(Math.sin(frames/300)/55, 0.001)
 	if(Math.random() < average_new_per_second){
-		var a = new element(Math.floor(Math.random() * 1.99), 0, 0)
+		var a = new element(Math.floor(Math.random() * 1.50), 0, 0)
 		a.elementPlay()
 		stars.push(a)
 	}
@@ -60,7 +60,7 @@ class element{
 			this.file = 'background-1.mp3';
 		}
 		else if(type === 1){
-			this.file = 'stars-1.mp3';
+			this.file = 'stars12.mp3';
 		}
 		else{
 			this.file = 'background-2.mp3';
@@ -80,13 +80,13 @@ class element{
 		};
 		if(this.type === 1){
 			ctx.rotate(this.rotation);
-			ctx.drawImage(star1, this.x, this.y, 75, 75);
+			ctx.drawImage(star2, this.x, this.y, 75, 75);
 			ctx.rotate(-this.rotation)
 
 		}
 		else{
 			ctx.rotate(this.rotation);
-			ctx.drawImage(star2, this.x, this.y, 75, 75);
+			ctx.drawImage(star1, this.x, this.y, 75, 75);
 			ctx.rotate(-this.rotation)
 		}
 		ctx.translate(-canvas.width/2, -canvas.height/2)
