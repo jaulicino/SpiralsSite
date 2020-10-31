@@ -11,3 +11,8 @@
 #button{
 	background-color: red;
 }
+#form{
+	position:relative;
+	top: min(49vw, 97vh);
+	padding:5vw;
+}

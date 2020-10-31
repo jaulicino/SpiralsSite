@@ -31,9 +31,10 @@ star1.src = "star1.png";
 var star2 = new Image;
 star2.src = "star2.png";
 function gameLoop(){
+	var coeff = document.getElementById("lname").value;
 	ctx.drawImage(background,0,0,2000,1000)
 	frames++;
-	average_new_per_second = Math.max(Math.sin(frames/300)/55, 0.001)
+	average_new_per_second = coeff*Math.max(Math.sin(frames/300)/55, 0.001)
 	if(Math.random() < average_new_per_second){
 		var a = new element(Math.floor(Math.random() * 1.99), 0, 0)
 		a.elementPlay()
