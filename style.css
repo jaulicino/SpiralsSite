@@ -1,0 +1,13 @@
+
+
+#canvas{
+	position: absolute;
+	padding: 0vw;
+	width: 98vw;
+	height: min(49vw, 97vh);
+	border: 5px solid green;
+}
+
+#button{
+	background-color: red;
+}
